@@ -4,7 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="./app.js" defer></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="./app.js" defer></script>
+        <title>Pomodoro Timer</title>
+      </head>
+      <body>
+        <div class="container">
+          <div class="main-title">Workout timer</div>
+          <div class="timer-settings-container">
+            <div class="pomodoro-title">Work</div>
+            <div class="break-title">Break</div>
+            <div class="pomodoro-container">
+              <button
+                aria-label="Decrease Pomodoro timer length"
+                class="decrementPomodoroTimer"
+                onclick="decrementPomodoroTimer()"
+              >
+                <i class="fa fa-minus"></i>
+              </button>
+              <div class="pomodoro-timer"></div>
+              <button
+                aria-label="Increase Pomodoro timer length"
+                class="incrementPomodoroTimer"
+                onclick="incrementPomodoroTimer()"
+              >
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="break-container">
+              <button
+                aria-label="Decrease break timer length"
+                class="decrementBreakTimer"
+                onclick="decrementBreakTimer()"
+              >
+                <i class="fa fa-minus"></i>
+              </button>
+              <div class="break-timer"></div>
+              <button
+                aria-label="Increase break timer length"
+                class="incrementBreakTimer"
+                onclick="incrementBreakTimer()"
+              >
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="timer-main-container"></div>
+          <div class="timer-description">Ready to work?</div>
+          <div class="controls-container">
+            <button class="button-start" onclick="startTimer()">
+              Start <i class="fa fa-play"></i>
+            </button>
+            <button class="button-pause" onclick="pauseTimer()">
+              Pause <i class="fa fa-pause"></i>
+            </button>
+            <button class="button-reset" onclick="resetTimer()">
+              Reset <i class="fa fa-refresh"></i>
+            </button>
+          </div>
+        </div>
+      </body>
+    </html>
+  </body>
 </html>
